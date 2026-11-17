@@ -68,12 +68,22 @@
 <section id="globalhealth" class="fade-in">
       <p class="section-label">Global Health</p>
       <h1 class="gh-headline">Upskill frontline workers.<span>Transform global health.</span></h1>
+      <div class="gh-carousel" role="region" aria-roledescription="carousel" aria-label="Photos from the field">
+        <div class="gh-track" tabindex="0">
+          <figure class="gh-slide"><img src="images/global-health/mothers-club.jpg" alt="A Mothers Club meeting run by HOPE Foundation: a health worker speaks to a large group of women seated outdoors under bamboo" width="845" height="640"></figure>
+          <figure class="gh-slide"><img src="images/global-health/outdoor-check.jpg" alt="Women gather around a health worker taking a blood pressure reading outdoors" width="479" height="640"></figure>
+          <figure class="gh-slide"><img src="images/global-health/doorstep.jpg" alt="A community health worker takes a woman's blood pressure outside her home while neighbors look on" width="480" height="640" loading="lazy"></figure>
+          <figure class="gh-slide"><img src="images/global-health/home-visit.jpg" alt="A health worker takes a man's blood pressure during a home visit" width="1138" height="640" loading="lazy"></figure>
+        </div>
+        <button type="button" class="gh-arrow gh-prev" aria-label="Previous photo" disabled>&lsaquo;</button>
+        <button type="button" class="gh-arrow gh-next" aria-label="Next photo">&rsaquo;</button>
+      </div>
       <p class="gh-lede">Doctor AI is a premier clinical AI company that blends a humanistic approach to medicine with an excellent clinical decision support tool. Patents across the entire health AI space.</p>
 
       <p class="gh-kicker">HOPE Foundation pilot &middot; Cox's Bazar, Bangladesh</p>
       <h2 class="gh-subhead">Healthcare at the doorstep.</h2>
       <p class="gh-pull">Imagine seeing a doctor means missing a full day of wages, or losing your job. Now care comes to your doorstep.</p>
-      <p class="gh-deck">Together with <a href="https://www.linkedin.com/company/hopeforbangladesh/" target="_blank" rel="noopener">HOPE Foundation for Women &amp; Children of Bangladesh</a>, community health workers carry Doctor AI into village homes, reaching people who would otherwise never see a doctor.</p>
+      <p class="gh-deck">Together with <a href="https://www.hopefoundationbd.org/" target="_blank" rel="noopener">HOPE Foundation for Women &amp; Children of Bangladesh</a>, community health workers carry Doctor AI into village homes, reaching people who would otherwise never see a doctor.</p>
 
       <div class="gh-beats">
         <div class="gh-beat">
@@ -95,7 +105,7 @@
       </ol>
 
       <h2 class="gh-subhead">A scalable solution for the excluded.</h2>
-      <p class="gh-deck">Every visit also builds an electronic medical record in a community that has none, and collects household-level disease data for public health and epidemiological agencies. Our field team at the <a href="https://www.linkedin.com/company/hopeforbangladesh/" target="_blank" rel="noopener">HOPE Foundation for Women &amp; Children of Bangladesh</a> runs this workflow every day.</p>
+      <p class="gh-deck">Every visit also builds an electronic medical record in a community that has none, and collects household-level disease data for public health and epidemiological agencies. Our field team at the <a href="https://www.hopefoundationbd.org/" target="_blank" rel="noopener">HOPE Foundation for Women &amp; Children of Bangladesh</a> runs this workflow every day.</p>
 
       <p class="gh-more"><a href="research.html">See the research behind this &rarr;</a></p>
     </section>
@@ -135,6 +145,25 @@
     img.style.display = 'none';
     document.getElementById('photoPlaceholder').style.display = 'flex';
   }
+</script>
+
+<script>
+  (function () {
+    var t = document.querySelector('.gh-track');
+    if (!t) return;
+    var p = document.querySelector('.gh-prev'), n = document.querySelector('.gh-next');
+    function upd() {
+      p.disabled = t.scrollLeft < 4;
+      n.disabled = t.scrollLeft + t.clientWidth >= t.scrollWidth - 4;
+    }
+    function go(d) { t.scrollBy({ left: d * Math.max(220, t.clientWidth * 0.8), behavior: 'smooth' }); }
+    p.addEventListener('click', function () { go(-1); });
+    n.addEventListener('click', function () { go(1); });
+    t.addEventListener('scroll', upd, { passive: true });
+    window.addEventListener('resize', upd);
+    window.addEventListener('load', upd);
+    upd();
+  })();
 </script>
 
 </body>

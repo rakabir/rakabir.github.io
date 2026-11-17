@@ -464,3 +464,16 @@ img { display: block; max-width: 100%; }
   .gh-beats, .gh-steps { grid-template-columns: 1fr; }
   .gh-beats { gap: 28px; }
 }
+
+.gh-carousel { position: relative; margin: 0 0 44px; }
+.gh-track { display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.gh-track::-webkit-scrollbar { display: none; }
+.gh-track:focus-visible { outline: 1px solid var(--text-dim); outline-offset: 4px; }
+.gh-slide { flex: none; margin: 0; scroll-snap-align: start; }
+.gh-slide img { display: block; height: clamp(220px, 34vw, 320px); width: auto; max-width: none; background: var(--bg-2); }
+.gh-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; padding: 0 0 3px; font-size: 24px; line-height: 1; color: var(--text-muted); background: rgba(255, 255, 255, 0.92); border: 1px solid var(--border); cursor: pointer; transition: color var(--transition), border-color var(--transition), opacity var(--transition); }
+.gh-arrow:hover { color: var(--accent); border-color: var(--accent); }
+.gh-arrow:disabled { opacity: 0; pointer-events: none; }
+.gh-prev { left: 8px; }
+.gh-next { right: 8px; }
+@media (prefers-reduced-motion: reduce) { .gh-track { scroll-behavior: auto; } }

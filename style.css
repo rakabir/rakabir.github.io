@@ -449,12 +449,8 @@ img { display: block; max-width: 100%; }
   line-height: 1.85;
   color: var(--text-muted);
   max-width: 58ch;
-  margin-bottom: 36px;
+  margin-bottom: 56px;
 }
-.gh-photos { display: grid; gap: 8px; margin: 0 0 56px; }
-.gh-photos-3 { grid-template-columns: repeat(3, 1fr); }
-.gh-photos-2 { grid-template-columns: repeat(2, 1fr); margin: 34px 0; }
-.gh-photos img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; background: var(--card, #eee); }
 .gh-kicker {
   font-size: 11px;
   letter-spacing: 2px;
@@ -473,8 +469,6 @@ img { display: block; max-width: 100%; }
 .gh-story p { font-size: 14px; line-height: 1.95; color: var(--text-muted); max-width: 64ch; margin-bottom: 20px; }
 .gh-story a { color: var(--maroon); text-decoration: underline; text-underline-offset: 3px; }
 .gh-story a:hover { color: var(--accent); }
-.gh-figure { margin: 34px 0; }
-.gh-figure img { display: block; width: 100%; height: auto; }
 .gh-more { margin-top: 38px; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; }
 .gh-more a { color: var(--maroon); }
 .gh-more a:hover { color: var(--accent); }

@@ -444,31 +444,23 @@ img { display: block; max-width: 100%; }
   text-wrap: balance;
 }
 .gh-headline span { display: block; color: var(--maroon); }
-.gh-lede {
-  font-size: 15px;
-  line-height: 1.85;
-  color: var(--text-muted);
-  max-width: 58ch;
-  margin-bottom: 56px;
-}
-.gh-kicker {
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  margin-bottom: 10px;
-}
-.gh-subhead {
-  font-size: clamp(22px, 3.4vw, 32px);
-  font-weight: 300;
-  line-height: 1.2;
-  letter-spacing: -0.3px;
-  color: var(--text);
-  margin: 0 0 24px;
-}
-.gh-story p { font-size: 14px; line-height: 1.95; color: var(--text-muted); max-width: 64ch; margin-bottom: 20px; }
-.gh-story a { color: var(--maroon); text-decoration: underline; text-underline-offset: 3px; }
-.gh-story a:hover { color: var(--accent); }
+.gh-lede { font-size: 15px; line-height: 1.85; color: var(--text-muted); max-width: 58ch; margin-bottom: 72px; }
+.gh-kicker { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 10px; }
+.gh-subhead { font-size: clamp(22px, 3.4vw, 32px); font-weight: 300; line-height: 1.2; letter-spacing: -0.3px; color: var(--text); margin: 0 0 22px; }
+.gh-pull { font-size: clamp(18px, 2.6vw, 23px); font-weight: 300; line-height: 1.5; letter-spacing: -0.2px; color: var(--text); max-width: 34ch; margin: 0 0 22px; text-wrap: balance; }
+.gh-deck { font-size: 14px; line-height: 1.9; color: var(--text-muted); max-width: 60ch; margin-bottom: 52px; }
+.gh-deck a, .gh-more a { color: var(--maroon); text-decoration: underline; text-underline-offset: 3px; }
+.gh-deck a:hover, .gh-more a:hover { color: var(--accent); }
+.gh-beats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 36px; margin: 0 0 64px; }
+.gh-beat h3 { font-size: 17px; font-weight: 300; line-height: 1.3; letter-spacing: -0.1px; color: var(--maroon); margin: 0 0 10px; }
+.gh-beat p { font-size: 13px; line-height: 1.85; color: var(--text-muted); }
+.gh-steps { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; border: 1px solid var(--border); background: var(--border); margin: 14px 0 72px; }
+.gh-step { background: var(--bg); padding: 22px; }
+.gh-step-n { font-size: 11px; letter-spacing: 1px; color: var(--text-dim); font-variant-numeric: tabular-nums; }
+.gh-step h3 { font-size: 12.5px; font-weight: 400; text-transform: uppercase; letter-spacing: 0.8px; color: var(--maroon); margin: 6px 0 8px; }
+.gh-step p { font-size: 12.5px; line-height: 1.75; color: var(--text-muted); }
 .gh-more { margin-top: 38px; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; }
-.gh-more a { color: var(--maroon); }
-.gh-more a:hover { color: var(--accent); }
+@media (max-width: 700px) {
+  .gh-beats, .gh-steps { grid-template-columns: 1fr; }
+  .gh-beats { gap: 28px; }
+}

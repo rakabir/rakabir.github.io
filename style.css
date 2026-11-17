@@ -432,3 +432,49 @@ img { display: block; max-width: 100%; }
   .sb-cta { width: auto; }
   .main-content section { padding: 40px 24px; }
 }
+
+/* ── Global Health page ── */
+.gh-headline {
+  font-size: clamp(30px, 5vw, 48px);
+  font-weight: 300;
+  line-height: 1.12;
+  letter-spacing: -0.5px;
+  color: var(--text);
+  margin: 0 0 26px;
+  text-wrap: balance;
+}
+.gh-headline span { display: block; color: var(--maroon); }
+.gh-lede {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--text-muted);
+  max-width: 58ch;
+  margin-bottom: 36px;
+}
+.gh-photos { display: grid; gap: 8px; margin: 0 0 56px; }
+.gh-photos-3 { grid-template-columns: repeat(3, 1fr); }
+.gh-photos-2 { grid-template-columns: repeat(2, 1fr); margin: 34px 0; }
+.gh-photos img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; background: var(--card, #eee); }
+.gh-kicker {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 10px;
+}
+.gh-subhead {
+  font-size: clamp(22px, 3.4vw, 32px);
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+  color: var(--text);
+  margin: 0 0 24px;
+}
+.gh-story p { font-size: 14px; line-height: 1.95; color: var(--text-muted); max-width: 64ch; margin-bottom: 20px; }
+.gh-story a { color: var(--maroon); text-decoration: underline; text-underline-offset: 3px; }
+.gh-story a:hover { color: var(--accent); }
+.gh-figure { margin: 34px 0; }
+.gh-figure img { display: block; width: 100%; height: auto; }
+.gh-more { margin-top: 38px; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; }
+.gh-more a { color: var(--maroon); }
+.gh-more a:hover { color: var(--accent); }
